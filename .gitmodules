@@ -1,0 +1,3 @@
+[submodule "duplicate-image-detector"]
+	path = duplicate-image-detector
+	url = https://github.com/paulkamer/duplicate-image-detector.git
