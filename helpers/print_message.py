@@ -1,6 +1,14 @@
-import sys
-from sense_hat import SenseHat
-from helpers import detect_sense_hat
+from helpers.detect_sense_hat import detect_sense_hat
+
+
+import warnings
+warnings.simplefilter("always", Warning)
+
+try:
+    from sense_hat import SenseHat
+    sense = SenseHat()
+except ImportError:
+    pass
 
 
 def print_message(message: str):
@@ -8,11 +16,5 @@ def print_message(message: str):
 
     sense_hat_present = detect_sense_hat()
     if (sense_hat_present):
-        sense = SenseHat()
+        sense.clear()
         sense.show_message(message)
-
-
-if __name__ == "__main__":
-    message = sys.argv[1]
-
-    print_message(message)
