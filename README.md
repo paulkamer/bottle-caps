@@ -6,6 +6,10 @@ Using this for my modest collection of beer bottle caps, to prevent adding dupli
 
 ## TODO's
 
-- [ ] Support override of duplicate-image-detector config.ini
-- [ ] support input from Sense HAT
+Bottlecaps project
+- [x] support input from Sense HAT
+- [x] Support override of `duplicate-image-detector config.ini`
 - [ ] Allow retaking photo
+
+Duplicateimagedetector project
+- [ ] Store/cache image features
