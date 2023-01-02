@@ -4,7 +4,7 @@ sense = None
 try:
     from sense_hat import SenseHat
     sense = SenseHat()
-except ImportError:
+except Exception:
     pass
 
 

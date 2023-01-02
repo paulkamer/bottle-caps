@@ -7,7 +7,7 @@ from helpers.sense import wait_for_stick_input
 has_camera = True
 try:
     from picamera import PiCamera
-except ImportError:
+except Exception:
     has_camera = False
     pass
 
