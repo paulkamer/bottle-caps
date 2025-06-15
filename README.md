@@ -4,12 +4,27 @@ Hobby project to detect duplicate images using the Raspberry Pi camera module an
 
 Using this for my modest collection of beer bottle caps, to prevent adding duplicates.
 
+
+```mermaid
+flowchart LR
+    Start --> CountDown
+    CountDown --> TakePhoto
+    TakePhoto --> DetectDuplicates
+    DetectDuplicates --> ReportStatus
+    ReportStatus --> End
+```
+
+
 ## TODO's
 
 Bottlecaps project
 - [x] support input from Sense HAT
 - [x] Support override of `duplicate-image-detector config.ini`
 - [ ] Allow retaking photo
+- [ ] simplify feedback presented by Sense HAT (Green/Orange/Red)
+- [ ] use events to display messages on Sense HAT
+- [ ] Rely on color histogram in case of many similarities
 
-Duplicateimagedetector project
-- [ ] Store/cache image features
+
+## Sources
+https://pythonhosted.org/sense-hat/
